@@ -30,8 +30,8 @@ def computer_guess(x):
     print(f"Yayy! The computer guessed your number, {guess}, correctly")
 
 print("YOU GUESS THE NUMBER HEHE: ")
-print("")
-print("")
 guess(10)
+print("")
+print("")
 print("COMPUTER GUESSING: ")
 computer_guess(900)
