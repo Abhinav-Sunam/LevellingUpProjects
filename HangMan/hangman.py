@@ -1,5 +1,5 @@
 import random
-from words import words
+from words import engwords
 import string
 #meaning from words.py import words variable
 
@@ -12,7 +12,7 @@ def get_valid_word(words):
 
 #main game
 def hangman():
-    word = get_valid_word(words)
+    word = get_valid_word(engwords)
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
     used_letters=set()
