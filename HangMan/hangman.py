@@ -4,17 +4,17 @@ import string
 #meaning from words.py import words variable
 
 #function to make sure the random word chosen by the computer does not have a space or - in between
-def get_valid_word(words):
-    word=random.choice(words) #gets word randomly
+def get_valid_word(wors):
+    word=random.choice(wors) #gets word randomly
     while '-' in word or ' ' in word:
-        word=random.choice(words)
+        word=random.choice(wors)
     return word.upper()
 
 #main game
 def hangman():
     word = get_valid_word(engwords)
     word_letters = set(word)
-    alphabet = set(string.ascii_uppercase)
+    alphabet = set(string.ascii_uppercase) #creates a set of all uppercase letters in the English alphabet
     used_letters=set()
      
     lives=10
