@@ -42,5 +42,6 @@ def hangman():
          print(f"Sorry you died! The word was {word}")
     else:
          print(f"YAYYY you guessed the word {word} correctly")
+         print()
 
 hangman()
