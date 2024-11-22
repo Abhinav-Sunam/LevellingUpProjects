@@ -1,9 +1,10 @@
 import random
 
 def play():
-    user=input("'r' for rock, 'p' for paper, 's' for scissors: \n")
+    user=input("'r' for rock, 'p' for paper, 's' for scissors: \n").lower()
     computer=random.choice(['r','p','s'])
-    print("") #prints an extra line just to make it look good
+    print("") #prints an extra line just to make it look goodS
+    print(f"Yours is {user} and Opponent's is {computer}")
     if user==computer:
         return 'tie' #we come out of the def after we reach here
     if is_win(user,computer):
@@ -14,4 +15,4 @@ def is_win(player,opponent):
         if(player=='r' and opponent == 's') or (player=='s' and opponent=='p') \
         or (player=='p'and opponent=='r'):
              return True   
-print(play())        
+print(play()) 
