@@ -17,8 +17,8 @@ def hangman():
     alphabet = set(string.ascii_uppercase)
     used_letters=set()
      
-    lives=6
-    while (len(word_letters))>0 or lives>0:  
+    lives=10
+    while ((len(word_letters))>0 and lives>0):  
      #lettters used
      print(f"You have {lives} lives left and you have used these letters: ", " ".join(used_letters))
 
@@ -28,7 +28,7 @@ def hangman():
      user_letter=input("Guess a letter: ").upper()
      if user_letter in alphabet - used_letters:
          used_letters.add(user_letter)
-         if used_letters in word_letters:
+         if user_letter in word_letters:
              word_letters.remove(user_letter)
          else:
               lives=lives-1
