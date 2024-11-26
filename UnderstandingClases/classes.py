@@ -21,8 +21,23 @@ class Person:
         else:
             print(f"{self.name} has no favorite food set yet!")
 
-person = Person("Alice", 25)
+person = Person("Alice", 25) #creating an object
 person.introduce()
 person.show_favorite_food()
 person.set_favorite_food("Pizza")
 person.show_favorite_food()
+
+
+
+class TicTacToe:
+    def __init__(self):
+        self.board=[' ' for _ in range(9)]
+        self.current_winner=None
+    def print_board(self):
+        prboard=[[str(i) for i in range((j*3),((j+1)*3))] for j in range(3)]
+        for x in prboard:
+            print("| "+ " | " .join(x)+" |")
+           # print('| ' + ' | '.join(row), ' |') 
+
+game=TicTacToe()
+game.print_board()
